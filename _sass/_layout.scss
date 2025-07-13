@@ -7,8 +7,14 @@ body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
-  h1,
-  h2,
+  h1 {
+    font-size: 2.5rem; // Changed from 3rem
+  }
+
+  h2 {
+    font-size: 1.25rem; // Changed from 1.5rem
+  }
+
   h3,
   h4,
   h5,
