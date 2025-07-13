@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jkoganem.github.io/al-folio/sitemap.xml
+Sitemap: https://jkoganem.github.io/sitemap.xml
