@@ -30,12 +30,7 @@
       "startDate": "2023-09-01",
       "endDate": "",
       "summary": "Postdoctoral Associate and Summer Research Mentor.",
-      "highlights": [
-        "Navier-Stokes",
-        "Nonlinear PDE Analysis",
-        "Machine Learning",
-        "Data Science"
-      ]
+      "highlights": ["Navier-Stokes", "Nonlinear PDE Analysis", "Machine Learning", "Data Science"]
     }
   ],
   "education": [
@@ -48,12 +43,7 @@
       "startDate": "2017-09-01",
       "endDate": "2023-05-01",
       "score": "10",
-      "courses": [
-        "Stochastic Calculus I",
-        "Stochastic Calculus II",
-        "Financial Data Science I",
-        "Financial Data Science II"
-      ]
+      "courses": ["Stochastic Calculus I", "Stochastic Calculus II", "Financial Data Science I", "Financial Data Science II"]
     }
   ],
   "awards": [
@@ -108,9 +98,7 @@
     {
       "name": "",
       "summary": "",
-      "highlights": [
-        ""
-      ],
+      "highlights": [""],
       "startDate": "",
       "endDate": "",
       "url": ""

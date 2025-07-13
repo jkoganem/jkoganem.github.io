@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 
+subtitle:
 profile:
   align: right
   image: prof_pic.jpg
@@ -24,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello, my name is **Junichi Koganemaru**. 
+Hello, my name is **Junichi Koganemaru**.
 
 I am a mathematician by training with a Ph.D. in Mathematics from <a href='https://www.cmu.edu/'>Carnegie Mellon University</a>, where I had the privilege of being advised by <a href='https://www.math.cmu.edu/~iantice/'>Professor Ian Tice</a>. I successfully defended my thesis in 2023 and continued as a postdoctoral associate in the same department from 2023 to 2025. My doctoral research focused on the rigorous analysis of the <a href='https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations'>incompressible Navier-Stokes equations</a>, studying the dynamics of viscous fluids in the presence of free boundaries.
 

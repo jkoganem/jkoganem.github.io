@@ -4,12 +4,12 @@
 
 title: Junichi Koganemaru # the website title (if blank, full name will be used instead)
 first_name: Junichi
-middle_name: 
+middle_name:
 last_name: Koganemaru
 contact_note: >
   Please feel free to connect with me via LinkedIn or contact me via email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  I am a mathematician with a Ph.D. in Mathematics from the Carnegie Mellon University. I was a postdoctoral associate at Carnegie Mellon University from 2023 to 2025. My research interests include nonlinear partial differential equations, fluid dynamics, and functional analysis. I specialize in the analysis of the incompressible Navier-Stokes equations with free boundary, which describe the motion of viscous fluid substances. 
+  I am a mathematician with a Ph.D. in Mathematics from the Carnegie Mellon University. I was a postdoctoral associate at Carnegie Mellon University from 2023 to 2025. My research interests include nonlinear partial differential equations, fluid dynamics, and functional analysis. I specialize in the analysis of the incompressible Navier-Stokes equations with free boundary, which describe the motion of viscous fluid substances.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
