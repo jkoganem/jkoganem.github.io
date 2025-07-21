@@ -10,25 +10,32 @@ ninja.data = [{
       window.location.href = "/";
     },
   },{id: "nav-blog",
-          title: "blog",
+          title: "Blog",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
           },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
-          title: "repositories",
+          title: "Repositories",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
+          },
+        },{id: "nav-research",
+          title: "Research",
+          description: "Summary of my research",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
