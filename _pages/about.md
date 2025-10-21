@@ -29,3 +29,10 @@ Hello, my name is **Junichi Koganemaru**.
 I am a mathematician by training with a Ph.D. in Mathematics from <a href='https://www.cmu.edu/'>Carnegie Mellon University</a>, where I had the privilege of being advised by <a href='https://www.math.cmu.edu/~iantice/'>Professor Ian Tice</a>. I successfully defended my thesis in 2023 and continued as a postdoctoral associate in the same department from 2023 to 2025. My doctoral research focused on the rigorous analysis of the <a href='https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations'>incompressible Navier-Stokes equations</a>, studying the dynamics of viscous fluids in the presence of free boundaries.
 
 I am currently seeking **quantitative research** and **data science** positions to apply my analytical expertise and leadership skills. My resume is available upon request, please feel free to reach out to me as I am open to new opportunities.
+
+<div class="mt-3">
+  <a class="btn btn-sm btn-primary mr-2" href="{{ '/assets/pdf/example_pdf.pdf' | relative_url }}" target="_blank" rel="noopener">View CV (PDF)</a>
+  <a class="btn btn-sm btn-outline-primary mr-2" href="mailto:jkoganem@gmail.com">Email me</a>
+  <a class="btn btn-sm btn-outline-secondary" href="https://www.linkedin.com/in/junichi-koganemaru/" target="_blank" rel="noopener">LinkedIn</a>
+  
+</div>

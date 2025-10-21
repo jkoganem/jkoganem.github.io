@@ -9,11 +9,11 @@ last_name: Koganemaru
 contact_note: >
   Please feel free to connect with me via LinkedIn or contact me via email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  I am a mathematician with a Ph.D. in Mathematics from the Carnegie Mellon University. I was a postdoctoral associate at Carnegie Mellon University from 2023 to 2025. My research interests include nonlinear partial differential equations, fluid dynamics, and functional analysis. I specialize in the analysis of the incompressible Navier-Stokes equations with free boundary, which describe the motion of viscous fluid substances.
+  I am a mathematician with a Ph.D. in Mathematics from Carnegie Mellon University. I was a postdoctoral associate at Carnegie Mellon University from 2023 to 2025. My research interests include nonlinear partial differential equations, fluid dynamics, and functional analysis. I specialize in the analysis of the incompressible Navier-Stokes equations with free boundary, which describe the motion of viscous fluid substances.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Junichi Koganemaru, mathematics, mathematician, fluid dynamics, Navier-Stokes, PDEs, machine learning, data science, Python, research, teaching, publications, Carnegie Mellon University # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: coffee-shop.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -62,9 +62,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://jkoganem.github.io/assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -114,7 +114,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname:  # put your disqus shortname (disabled)
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -258,8 +258,8 @@ display_categories: ["coding", "data-science", "mathematics", "statistics"] # th
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Koganemaru]
+  first_name: [Junichi, J.]
 
   style: apa
   locale: en
@@ -385,6 +385,13 @@ enable_project_categories: true # enables categorization of projects into multip
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
 enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
+
+# -----------------------------------------------------------------------------
+# Social profiles (used for metadata & schema.org sameAs)
+# -----------------------------------------------------------------------------
+
+github_username: jkoganem
+linkedin_username: koganemaru-junichi
 
 # -----------------------------------------------------------------------------
 # Library versions
