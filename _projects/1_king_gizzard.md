@@ -97,12 +97,14 @@ The winning architecture combines graph neural networks with statistical priors:
 ## Key Results
 
 **Performance Metrics:**
+
 - Overall Recall@15: **52.66%** (vs. 35-40% baseline of always predicting top 15 songs)
 - Regular shows: 50.51%
 - Marathon shows (24+ songs): 63.93%
 - Model parameters: 78,643
 
 **Inference Speed:**
+
 - Training time: 39.7 minutes (one-time)
 - Inference: <1ms per prediction
 

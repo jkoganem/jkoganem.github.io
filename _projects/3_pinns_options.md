@@ -23,6 +23,7 @@ Option prices satisfy the Black-Scholes partial differential equation:
 $$\frac{\partial V}{\partial \tau} = \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + (r-q)S\frac{\partial V}{\partial S} - rV$$
 
 **Traditional Approaches:**
+
 - **Analytical formulas**: Exact but limited to simple contracts
 - **Finite Difference**: High accuracy but computationally expensive
 - **Monte Carlo**: Versatile but slow convergence
@@ -44,12 +45,12 @@ $$\frac{\partial V}{\partial \tau} = \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}
 
 ### Performance Summary
 
-| Method | Price ($) | Error (%) | Inference Time | Notes |
-|--------|-----------|-----------|----------------|-------|
-| **Black-Scholes** | 9.227006 | 0.0000 | <0.001s | Analytical (reference) |
-| **Crank-Nicolson** | 9.227661 | 0.0071 | 0.051s | 501×500 grid |
-| **Monte Carlo** | 9.162932 | 0.6944 | 0.533s | 100k paths, antithetic |
-| **PINN (Optimized)** | 9.221150 | 0.0635 | <0.001s | 30k epochs training |
+| Method               | Price ($) | Error (%) | Inference Time | Notes                  |
+| -------------------- | --------- | --------- | -------------- | ---------------------- |
+| **Black-Scholes**    | 9.227006  | 0.0000    | <0.001s        | Analytical (reference) |
+| **Crank-Nicolson**   | 9.227661  | 0.0071    | 0.051s         | 501×500 grid           |
+| **Monte Carlo**      | 9.162932  | 0.6944    | 0.533s         | 100k paths, antithetic |
+| **PINN (Optimized)** | 9.221150  | 0.0635    | <0.001s        | 30k epochs training    |
 
 ---
 
@@ -98,6 +99,7 @@ Three key techniques proved essential for achieving <0.1% error:
 </div>
 
 **Generalization Performance:**
+
 - Mean error: **0.044%** across spot range $S \in [\$50, \$150]$
 - ATM region ($S \in [\$90, \$110]$): **<0.05%** error for all maturities
 - Max error: 0.152% (deep out-of-the-money)
@@ -120,16 +122,19 @@ The PINN maintains competitive accuracy throughout the at-the-money corridor whe
 ### Speed Comparison
 
 **One-time Training:**
+
 - PINN: 16 minutes (30,000 epochs, one-time cost)
 - Crank-Nicolson/Monte Carlo: N/A (solve each time)
 
 **Inference (per price):**
+
 - Black-Scholes: <0.001s (analytical)
 - **PINN: <0.001s** (forward pass)
 - Crank-Nicolson: 0.051s (solve PDE)
 - Monte Carlo: 0.533s (simulate paths)
 
 **Batch Pricing (1000 contracts):**
+
 - Black-Scholes: <0.1s
 - **PINN: <0.1s** (parallel GPU)
 - Crank-Nicolson: ~51s
@@ -159,14 +164,14 @@ The PINN maintains competitive accuracy throughout the at-the-money corridor whe
 
 **Validated Configuration** (30,000 epochs):
 
-| Parameter | Value | Description |
-|-----------|-------|-------------|
+| Parameter     | Value | Description                |
+| ------------- | ----- | -------------------------- |
 | learning_rate | 0.001 | Conservative for stability |
-| hidden_dim | 128 | Network capacity |
-| num_layers | 5 | Depth for expressiveness |
-| fourier_scale | 3.0 | Frequency bandwidth |
-| warmup_epochs | 1000 | Warmup duration |
-| ema_decay | 0.999 | Weight averaging |
+| hidden_dim    | 128   | Network capacity           |
+| num_layers    | 5     | Depth for expressiveness   |
+| fourier_scale | 3.0   | Frequency bandwidth        |
+| warmup_epochs | 1000  | Warmup duration            |
+| ema_decay     | 0.999 | Weight averaging           |
 
 Bayesian optimization over 40 trials confirmed lower learning rates provide better final accuracy despite slower initial convergence.
 

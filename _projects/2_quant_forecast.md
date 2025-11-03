@@ -78,6 +78,7 @@ $$w_t = \frac{\sigma_{\text{target}}}{\hat{\sigma}_{t|t-1}} \cdot \text{sign}(\h
 </div>
 
 **Forecast Accuracy:**
+
 - Best directional accuracy: **57.2%** (modestly above random 50%)
 - Simple models outperformed complex SARIMA
 - Diebold-Mariano tests confirm significant accuracy differences between model classes
@@ -85,12 +86,14 @@ $$w_t = \frac{\sigma_{\text{target}}}{\hat{\sigma}_{t|t-1}} \cdot \text{sign}(\h
 ### Strategy Performance
 
 **Volatility-Managed Strategy:**
+
 - Sharpe Ratio: **1.98**
 - Annual Return: **17.0%**
 - Annual Volatility: **8.6%**
 - Maximum Drawdown: **-7.7%**
 
 **vs. Buy-and-Hold SPY:**
+
 - Sharpe Ratio: 0.89
 - Annual Return: 14.2%
 - Annual Volatility: 16.0%
@@ -110,6 +113,7 @@ $$w_t = \frac{\sigma_{\text{target}}}{\hat{\sigma}_{t|t-1}} \cdot \text{sign}(\h
 </div>
 
 The rolling analysis demonstrates:
+
 - Consistent Sharpe ratio above 1.0 across most periods
 - Successful volatility targeting (stable 8-10% annualized volatility)
 - Resilience through multiple market regimes

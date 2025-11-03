@@ -82,6 +82,7 @@ The engine implements classical strategies to verify methodology:
 </div>
 
 **Baseline Strategies Tested:**
+
 - Time-Series Momentum: Sharpe 0.220
 - Cross-Sectional Momentum: Sharpe -0.006
 - Mean Reversion (1-5 day): Sharpe 0.216
@@ -93,6 +94,7 @@ Following Frazzini et al. (2012), total execution costs:
 $$\text{Total Cost} = c + s + b \cdot h$$
 
 where:
+
 - $c = 0.0002$ (commission, 2 bps)
 - $s = 0.0005$ (slippage, 5 bps)
 - $b = 0.003$ (holding cost, 30 bps annually)
@@ -104,6 +106,7 @@ where:
 ### Three-Tier Filtering System
 
 **Tier 1: Hard Filters** (Pass/Fail)
+
 - Total return > 0%
 - Sharpe ratio > 0.30
 - Maximum drawdown < 40%
@@ -113,17 +116,18 @@ where:
 
 $$\text{Score} = \sum_{i=1}^{7} w_i \cdot \min\left(1, \frac{M_i}{T_i}\right) \times 100$$
 
-| Metric | Weight | Target |
-|--------|--------|--------|
-| Sharpe Ratio | 35% | 1.5 |
-| Max Drawdown | 20% | 10% |
-| Sortino Ratio | 15% | 1.8 |
-| Calmar Ratio | 10% | 2.0 |
-| Win Rate | 5% | 55% |
-| Consistency | 10% | 0.8 |
-| Tail Risk | 5% | -2% |
+| Metric        | Weight | Target |
+| ------------- | ------ | ------ |
+| Sharpe Ratio  | 35%    | 1.5    |
+| Max Drawdown  | 20%    | 10%    |
+| Sortino Ratio | 15%    | 1.8    |
+| Calmar Ratio  | 10%    | 2.0    |
+| Win Rate      | 5%     | 55%    |
+| Consistency   | 10%    | 0.8    |
+| Tail Risk     | 5%     | -2%    |
 
 **Tier 3: Robustness Checks**
+
 - Purged K-fold cross-validation (prevents temporal leakage)
 - Walk-forward analysis
 - Regime sensitivity testing
@@ -146,11 +150,13 @@ $$\text{Score} = \sum_{i=1}^{7} w_i \cdot \min\left(1, \frac{M_i}{T_i}\right) \t
 The system queries a persistent SQLite database to provide contextual examples:
 
 **Positive Examples** (Top 3):
+
 - High-performing strategies (Sharpe > 0.50)
 - Realistic factor combinations
 - Proper weight distributions
 
 **Negative Examples** (Top 2):
+
 - Instructive failure modes
 - Common mistakes to avoid
 
@@ -175,15 +181,16 @@ Results injected into next iteration with enforcement: "If LOFO identifies harmf
 ### Latest Experiments (November 2025)
 
 **Test Configuration:**
+
 - Universe: 31 equities across sectors
 - Period: 2019-2025 (~7 years)
 - Models: GPT-4o-mini, GPT-5-nano, GPT-5-mini
 - Target: Score ≥ 50/100, Sharpe ≥ 0.70
 
-| Model | Iterations | Best Score | Best Sharpe | Outcome |
-|-------|-----------|------------|-------------|---------|
-| GPT-5-nano | 58/150 | 32.3/100 | 0.27 | Crashed (malformed JSON) |
-| GPT-5-mini | 56/100 | 35.3/100 | 0.42 | Stopped (plateau) |
+| Model      | Iterations | Best Score | Best Sharpe | Outcome                  |
+| ---------- | ---------- | ---------- | ----------- | ------------------------ |
+| GPT-5-nano | 58/150     | 32.3/100   | 0.27        | Crashed (malformed JSON) |
+| GPT-5-mini | 56/100     | 35.3/100   | 0.42        | Stopped (plateau)        |
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -202,6 +209,7 @@ Results injected into next iteration with enforcement: "If LOFO identifies harmf
 4. **Feedback Incorporation Failure**: Explicit LOFO directives didn't prevent repeated mistakes
 
 **After 168+ strategy evaluations:**
+
 - Pass rate: **0%** (zero strategies met production thresholds)
 - Best Sharpe: **0.42** (60% of target 0.70)
 - Improvement stopped after ~25 iterations
@@ -213,26 +221,31 @@ Results injected into next iteration with enforcement: "If LOFO identifies harmf
 ### Root Causes
 
 **Hypothesis 1: Lack of Domain Alignment**
+
 - Foundation models not trained on quantitative finance tasks
 - Pre-training data includes general finance but limited professional alpha research
 
 **Hypothesis 2: Insufficient Seed Database**
+
 - Small database (~20-30 passing strategies)
 - Limited factor space exploration
 - Lack of regime-specific strategies
 
 **Hypothesis 3: Prompt Engineering Ceiling**
+
 - Despite dynamic prompting with LOFO, feedback, and guidance
 - LLMs generate similar patterns across iterations
 
 ### Proposed Solutions
 
 **1. Post-Alignment with Expert Feedback**
+
 - RLHF (Reinforcement Learning from Human Feedback)
 - DPO (Direct Preference Optimization)
 - Expert demonstrations (100-500 curated strategy specs)
 
 **2. Expand Seed Database**
+
 - Grid search over factor combinations
 - Bayesian optimization for weight allocation
 - Regime clustering (bull/bear/volatile)
@@ -259,18 +272,22 @@ The system generates 80+ features from OHLCV data:
 **1. Multi-Horizon Returns** (8 lookbacks: 1d, 5d, 10d, 20d, 21d, 60d, 126d, 252d)
 
 **2. Volatility Measures**
+
 - Close-to-Close, Parkinson, HL Volatility
 - Multiple windows (10d, 20d, 60d)
 
 **3. Technical Indicators**
+
 - RSI (14d, 28d), Volume Z-Score, Average Dollar Volume
 
 **4. Statistical Moments**
+
 - Z-Scores, Skewness, Kurtosis (cross-sectional)
 
 **5. Market Beta** (60d, 252d to SPY)
 
 **6. Macro Indicators** (optional from FRED)
+
 - GDP, CPI, unemployment, Fed funds, VIX, credit spreads
 
 ---
