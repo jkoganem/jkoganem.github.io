@@ -33,12 +33,12 @@ I am currently seeking **quantitative research** and **data science** positions 
 <div class="row" style="margin-top: 0; margin-bottom: 0;">
     <div class="col-sm-5" style="margin-top: 0; padding-top: 0;">
         <figure style="margin-top: 0;">
-            <img src="assets/img/surface_response_3d.gif" title="3D surface response visualization" class="img-fluid rounded z-depth-1" loading="eager">
+            <img src="/assets/img/surface_response_3d.gif" title="3D surface response visualization" class="img-fluid rounded z-depth-1" loading="eager">
         </figure>
     </div>
     <div class="col-sm-5" style="margin-top: 0; padding-top: 0;">
         <figure style="margin-top: 0;">
-            <img src="assets/img/stress_profile_2d.gif" title="2D stress profile evolution" class="img-fluid rounded z-depth-1" loading="eager">
+            <img src="/assets/img/stress_profile_2d.gif" title="2D stress profile evolution" class="img-fluid rounded z-depth-1" loading="eager">
         </figure>
     </div>
 </div>
