@@ -37,12 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "projects-end-to-end-audio-classification",
+        },{id: "projects-end-to-end-audio-classification",
           title: 'End-to-End audio classification',
           description: "BirdCLEF 2024",
           section: "Projects",handler: () => {
