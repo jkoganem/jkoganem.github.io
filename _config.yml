@@ -114,7 +114,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname:  # put your disqus shortname (disabled)
+disqus_shortname: # put your disqus shortname (disabled)
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
