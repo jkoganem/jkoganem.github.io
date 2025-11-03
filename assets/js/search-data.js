@@ -42,11 +42,6 @@ ninja.data = [{
           description: "Predicting concert setlists using Graph Neural Networks and temporal patterns",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_king_gizzard/";
-            },},{id: "projects-end-to-end-audio-classification",
-          title: 'End-to-End audio classification',
-          description: "BirdCLEF 2024",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
             },},{id: "projects-time-series-forecasting-amp-risk-managed-trading",
           title: 'Time-Series Forecasting &amp;amp; Risk-Managed Trading',
           description: "Combining classical statistics with machine learning for volatility-targeted strategies",
@@ -62,6 +57,11 @@ ninja.data = [{
           description: "Exploring the frontier of AI-driven quantitative finance with iterative refinement",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_alphalab/";
+            },},{id: "projects-bird-species-identification-using-deep-learning",
+          title: 'Bird Species Identification using Deep Learning',
+          description: "Passive acoustic monitoring with CNNs for biodiversity conservation (BirdCLEF 2024)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_birdclef/";
             },},{
         id: 'social-email',
         title: 'email',
