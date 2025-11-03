@@ -4,7 +4,7 @@ title: Physics-Informed Neural Networks for Options Pricing
 description: Achieving finite difference accuracy with neural network speed
 img: assets/img/projects/pinns/method_comparison_bars.png
 importance: 3
-category: computational finance
+category: work
 github: https://github.com/jkoganem/pinns-options-pricing
 ---
 

@@ -4,7 +4,7 @@ title: King Gizzard Setlist Prediction
 description: Predicting concert setlists using Graph Neural Networks and temporal patterns
 img: assets/img/projects/king-gizzard/4b_pmi_matrix.png
 importance: 1
-category: machine learning
+category: work
 github: https://github.com/jkoganem/king-gizzard-setlist-prediction
 ---
 

@@ -4,7 +4,7 @@ title: AlphaLab - LLM-Powered Trading Strategy Generation
 description: Exploring the frontier of AI-driven quantitative finance with iterative refinement
 img: assets/img/projects/alphalab/equity_curves.png
 importance: 4
-category: AI research
+category: work
 github: https://github.com/jkoganem/alphalab
 ---
 

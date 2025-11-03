@@ -4,7 +4,7 @@ title: Bird Species Identification using Deep Learning
 description: Passive acoustic monitoring with CNNs for biodiversity conservation (BirdCLEF 2024)
 img: assets/img/projects/birdclef/output5.png
 importance: 5
-category: deep learning
+category: work
 github: https://github.com/AmziJeffs/Erdos_birdCLEF
 ---
 

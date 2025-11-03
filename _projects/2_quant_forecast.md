@@ -4,7 +4,7 @@ title: Time-Series Forecasting & Risk-Managed Trading
 description: Combining classical statistics with machine learning for volatility-targeted strategies
 img: assets/img/projects/quant-forecast/equity_curves.png
 importance: 2
-category: quantitative finance
+category: work
 github: https://github.com/jkoganem/quant-forecast-strategies
 ---
 
