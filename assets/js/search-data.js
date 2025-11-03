@@ -37,11 +37,31 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "projects-end-to-end-audio-classification",
+        },{id: "projects-king-gizzard-setlist-prediction",
+          title: 'King Gizzard Setlist Prediction',
+          description: "Predicting concert setlists using Graph Neural Networks and temporal patterns",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_king_gizzard/";
+            },},{id: "projects-end-to-end-audio-classification",
           title: 'End-to-End audio classification',
           description: "BirdCLEF 2024",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
+            },},{id: "projects-time-series-forecasting-amp-risk-managed-trading",
+          title: 'Time-Series Forecasting &amp;amp; Risk-Managed Trading',
+          description: "Combining classical statistics with machine learning for volatility-targeted strategies",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_quant_forecast/";
+            },},{id: "projects-physics-informed-neural-networks-for-options-pricing",
+          title: 'Physics-Informed Neural Networks for Options Pricing',
+          description: "Achieving finite difference accuracy with neural network speed",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_pinns_options/";
+            },},{id: "projects-alphalab-llm-powered-trading-strategy-generation",
+          title: 'AlphaLab - LLM-Powered Trading Strategy Generation',
+          description: "Exploring the frontier of AI-driven quantitative finance with iterative refinement",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_alphalab/";
             },},{
         id: 'social-email',
         title: 'email',
