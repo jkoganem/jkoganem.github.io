@@ -4,4 +4,8 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - jkoganem/king-gizzard-setlist-prediction
+  - jkoganem/quant-forecast-strategies
+  - jkoganem/pinns-options-pricing
+  - jkoganem/alphalab
   - AmziJeffs/Erdos_birdCLEF
