@@ -31,18 +31,19 @@ I am a mathematician by training with a Ph.D. in Mathematics from <a href='https
 I am currently seeking **quantitative research** and **data science** positions to apply my analytical expertise.
 
 <div class="row" style="margin-top: 0; margin-bottom: 0;">
-    <div class="col-sm-4" style="margin-top: 0; padding-top: 0;">
+    <div class="col-sm-5" style="margin-top: 0; padding-top: 0;">
         <figure style="margin-top: 0;">
             <img src="assets/img/surface_response_3d.gif" title="3D surface response visualization" class="img-fluid rounded z-depth-1" loading="eager">
         </figure>
     </div>
-    <div class="col-sm-4" style="margin-top: 0; padding-top: 0;">
+    <div class="col-sm-5" style="margin-top: 0; padding-top: 0;">
         <figure style="margin-top: 0;">
             <img src="assets/img/stress_profile_2d.gif" title="2D stress profile evolution" class="img-fluid rounded z-depth-1" loading="eager">
         </figure>
     </div>
 </div>
 <div class="row">
+    <div class="col-sm-1"></div>
     <div class="col-sm-8">
         <div class="caption" style="font-size: 0.85em;">
             Visualizations of traveling wave solutions to the free boundary Navier-Stokes equations
