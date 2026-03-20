@@ -1,0 +1,109 @@
+---
+const positions = [
+  {
+    title: 'Postdoctoral Associate',
+    institution: 'Carnegie Mellon University',
+    department: 'Department of Mathematical Sciences',
+    dates: '2023 – 2025',
+  },
+  {
+    title: 'Research Mentor',
+    institution: 'Carnegie Mellon University',
+    programs: [
+      { name: 'SEMS (Summer Experiences in the Mathematical Sciences)', topic: 'Physics-informed neural networks (PINNs)', dates: 'Summer 2024' },
+      { name: 'Mathematical Finance Summer Undergraduate Research Program (MFSURP)', topic: 'Options pricing', dates: 'Summer 2022' },
+    ],
+    department: null,
+    dates: null,
+  },
+  {
+    title: 'Ph.D. Researcher',
+    institution: 'Carnegie Mellon University',
+    department: 'Department of Mathematical Sciences',
+    dates: '2017 – 2023',
+  },
+];
+
+const education = [
+  {
+    degree: 'Ph.D. in Mathematics',
+    institution: 'Carnegie Mellon University',
+    detail: 'Advised by Prof. Ian Tice',
+    dates: '2017 – 2023',
+  },
+  {
+    degree: 'B.A. with Honors in Mathematics',
+    institution: 'New York University',
+    dates: '2013 – 2017',
+  },
+];
+---
+
+<section id="highlights" class="bg-surface py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="font-serif text-2xl text-cream-100 mb-14">Background</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- ── Experience (timeline) ── -->
+      <div>
+        <h3 class="font-serif text-base text-cream-100 mb-6 pb-2 border-b-2 border-amber-accent">
+          Experience
+        </h3>
+
+        <div class="relative pl-6">
+          {positions.map((pos, i) => (
+            <div class={`relative ${i < positions.length - 1 ? 'mb-8' : ''}`}>
+              <!-- dot: outlined circle for all past positions -->
+              <div class="absolute -left-[17px] top-[5px] w-[14px] h-[14px] rounded-full bg-surface border-2 border-amber-accent"></div>
+
+              <p class="font-serif text-cream-100 text-sm leading-snug">{pos.title}</p>
+              <p class="text-cream-300 text-xs mt-0.5">{pos.institution}</p>
+              {pos.programs
+                ? pos.programs.map((prog, pi) => (
+                    <div class={pi > 0 ? 'mt-2' : 'mt-1'}>
+                      <p class="text-cream-400 text-xs">{prog.name}</p>
+                      <p class="text-cream-400 text-xs">Topic: {prog.topic}</p>
+                      <p class="text-cream-400 text-xs tabular-nums">{prog.dates}</p>
+                    </div>
+                  ))
+                : <>
+                    {pos.department && <p class="text-cream-400 text-xs mt-0.5">{pos.department}</p>}
+                    {pos.dates && <p class="text-cream-400 text-xs mt-1 tabular-nums">{pos.dates}</p>}
+                  </>
+              }
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- ── Education (checklist) ── -->
+      <div>
+        <h3 class="font-serif text-base text-cream-100 mb-6 pb-2 border-b-2 border-amber-accent">
+          Education
+        </h3>
+
+        <div class="space-y-7">
+          {education.map(edu => (
+            <div class="flex gap-3">
+              <div class="w-7 h-7 rounded-full bg-amber-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-background" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-serif text-cream-100 text-sm leading-snug">{edu.degree}</p>
+                <p class="text-cream-300 text-xs mt-0.5">{edu.institution}</p>
+                {edu.detail && <p class="text-cream-400 text-xs mt-0.5">{edu.detail}</p>}
+                <p class="text-cream-400 text-xs mt-1 tabular-nums">{edu.dates}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

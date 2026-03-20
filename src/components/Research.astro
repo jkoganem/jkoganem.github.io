@@ -1,0 +1,123 @@
+---
+// TODO: add DOI / arXiv links
+
+const researchAreas = [
+  'Partial Differential Equations',
+  'Functional Analysis',
+  'Mathematical Fluid Dynamics',
+];
+
+const publications = [
+  {
+    title:
+      'Traveling wave solutions to the inclined or periodic free boundary ' +
+      'incompressible Navier-Stokes equations',
+    authors: 'J. Koganemaru and I. Tice',
+    venue: 'Journal of Functional Analysis',
+    pages: '75 pp.',
+    year: '2023',
+    journalHref: 'https://www.sciencedirect.com/science/article/pii/S0022123623002148',
+    arxivHref: 'https://arxiv.org/abs/2207.07702',
+  },
+  {
+    title:
+      'Traveling wave solutions to the free boundary incompressible Navier-Stokes ' +
+      'equations with Navier boundary conditions',
+    authors: 'J. Koganemaru and I. Tice',
+    venue: 'Journal of Differential Equations',
+    pages: '57 pp.',
+    year: '2024',
+    journalHref: 'https://www.sciencedirect.com/science/article/pii/S0022039624004741',
+    arxivHref: 'https://arxiv.org/abs/2311.01590',
+  },
+];
+
+const talks = [
+  {
+    title:
+      'Traveling wave solutions to the free boundary incompressible Navier-Stokes equations',
+    authors: 'Junichi Koganemaru and Ian Tice',
+    venue: 'Equadiff',
+    location: 'Karlstad University, Sweden',
+    dates: 'June 10–14, 2024',
+    abstractHref: 'https://www.kau.se/files/2024-06/Book_of_Abstractsnew.pdf',
+    slidesHref: '/equadiff2024-slides.pdf', // place PDF in public/
+  },
+];
+---
+
+<section id="research" class="bg-surface py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="font-serif text-2xl text-cream-100 mb-6">Research</h2>
+
+    <p class="text-cream-300 text-sm leading-relaxed max-w-2xl mb-14">
+      My research focuses on the rigorous analysis of nonlinear partial differential equations.
+    </p>
+
+    <!-- ── Research Areas ── -->
+    <h3 class="font-serif text-base text-cream-100 mb-6 pb-2 border-b border-border">
+      Research Areas
+    </h3>
+
+    <div class="flex flex-wrap gap-2 mb-14">
+      {researchAreas.map(area => (
+        <span class="px-3 py-1 rounded-full border border-amber-accent text-amber-accent text-xs font-sans">
+          {area}
+        </span>
+      ))}
+    </div>
+
+    <!-- ── Publications ── -->
+    <h3 class="font-serif text-base text-cream-100 mb-6 pb-2 border-b border-border">
+      Selected Publications
+    </h3>
+
+    <div class="space-y-8 mb-14">
+      {publications.map(pub => (
+        <div class="flex gap-6">
+          <span class="font-serif text-amber-accent text-sm w-10 flex-shrink-0 pt-0.5 tabular-nums">
+            {pub.year}
+          </span>
+          <div>
+            <p class="font-serif text-cream-100 text-sm leading-snug">{pub.title}</p>
+            <p class="text-cream-400 text-xs mt-1">{pub.authors}</p>
+            <p class="text-cream-400 text-xs mt-0.5 italic">{pub.venue} &middot; {pub.pages}</p>
+            <div class="flex gap-4 mt-1.5">
+              <a href={pub.journalHref} target="_blank" rel="noopener"
+                class="text-xs text-amber-accent hover:underline">Journal</a>
+              <a href={pub.arxivHref} target="_blank" rel="noopener"
+                class="text-xs text-amber-accent hover:underline">arXiv</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- ── Talks ── -->
+    <h3 class="font-serif text-base text-cream-100 mb-6 pb-2 border-b border-border">
+      Talks
+    </h3>
+
+    <div class="space-y-8">
+      {talks.map(talk => (
+        <div class="flex gap-6">
+          <span class="font-serif text-amber-accent text-sm w-10 flex-shrink-0 pt-0.5 tabular-nums">
+            {talk.dates.slice(-4)}
+          </span>
+          <div>
+            <p class="font-serif text-cream-100 text-sm leading-snug">{talk.title}</p>
+            <p class="text-cream-400 text-xs mt-0.5 italic">{talk.venue} &middot; {talk.location} &middot; {talk.dates}</p>
+            <div class="flex gap-4 mt-1.5">
+              <a href={talk.abstractHref} target="_blank" rel="noopener"
+                class="text-xs text-amber-accent hover:underline">Abstract</a>
+              <a href={talk.slidesHref} target="_blank" rel="noopener"
+                class="text-xs text-amber-accent hover:underline">Slides</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
