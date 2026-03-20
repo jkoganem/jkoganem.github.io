@@ -32,6 +32,14 @@ const publications = [
   },
 ];
 
+const thesis = {
+  title: 'Traveling wave solutions to the free boundary incompressible Navier-Stokes equations',
+  year: '2023',
+  institution: 'Carnegie Mellon University',
+  pages: '272 pp.',
+  href: 'https://kilthub.cmu.edu/articles/thesis/Traveling_wave_solutions_to_the_free_boundary_incompressible_Navier-Stokes_equations/24053892?file=42184224',
+};
+
 const talks = [
   {
     title:
@@ -99,7 +107,7 @@ const talks = [
       Talks
     </h3>
 
-    <div class="space-y-8">
+    <div class="space-y-8 mb-14">
       {talks.map(talk => (
         <div class="flex gap-6">
           <span class="font-serif text-amber-accent text-sm w-10 flex-shrink-0 pt-0.5 tabular-nums">
@@ -117,6 +125,27 @@ const talks = [
           </div>
         </div>
       ))}
+    </div>
+
+    <!-- ── Thesis ── -->
+    <h3 class="font-serif text-base text-cream-100 mb-6 pb-2 border-b border-border">
+      Thesis
+    </h3>
+
+    <div class="space-y-8">
+      <div class="flex gap-6">
+        <span class="font-serif text-amber-accent text-sm w-10 flex-shrink-0 pt-0.5 tabular-nums">
+          {thesis.year}
+        </span>
+        <div>
+          <p class="font-serif text-cream-100 text-sm leading-snug">{thesis.title}</p>
+          <p class="text-cream-400 text-xs mt-0.5 italic">{thesis.institution} &middot; {thesis.pages}</p>
+          <div class="flex gap-4 mt-1.5">
+            <a href={thesis.href} target="_blank" rel="noopener"
+              class="text-xs text-amber-accent hover:underline">KiltHub</a>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
